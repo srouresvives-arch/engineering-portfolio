@@ -1,0 +1,51 @@
+.project-results{list-style:none;margin:1.6rem 0 0;padding:0;border-top:1px solid rgba(233,228,215,.24)}
+.project-results li{padding:.55rem 0;border-bottom:1px solid rgba(233,228,215,.15);font:9px 'DM Mono';letter-spacing:.06em}
+
+/* A.01 — real LMH renders become a speed pass, then resolve into the actual FIAS result. */
+.fias-media{background:#10130f}
+.fias-media .lmh-still,.fias-media .fias-final{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.fias-media .lmh-night{animation:lmhOpening 16s cubic-bezier(.2,.8,.2,1) infinite}
+.fias-media .lmh-kinetic{opacity:0;animation:lmhKinetic 16s cubic-bezier(.2,.8,.2,1) infinite}
+.fias-media .lmh-side{opacity:0;animation:lmhSide 16s cubic-bezier(.2,.8,.2,1) infinite}
+.fias-final{opacity:0;z-index:2;animation:fiasFinal 16s cubic-bezier(.2,.8,.2,1) infinite;mix-blend-mode:screen}
+.fias-media .fias-wire{z-index:4}.fias-media .project-number{z-index:5}.fias-media .media-overlay{z-index:3}
+.fias-wire{position:absolute;z-index:2;inset:12%;border:1px solid rgba(214,255,63,.7);clip-path:polygon(50% 0,100% 100%,0 100%);animation:fiasPulse 3.4s ease-in-out infinite}
+.fias-wire span{position:absolute;top:42%;left:50%;transform:translate(-50%,-50%);font:700 clamp(2rem,5vw,5rem) Manrope;letter-spacing:-.1em;color:var(--acid)}
+.fias-wire i{position:absolute;left:50%;bottom:0;width:1px;height:100%;transform-origin:bottom;background:rgba(214,255,63,.7)}
+.fias-wire i:nth-of-type(1){transform:rotate(0)}.fias-wire i:nth-of-type(2){transform:rotate(120deg)}.fias-wire i:nth-of-type(3){transform:rotate(-120deg)}
+.fias-wire p{position:absolute;bottom:-25px;left:50%;transform:translateX(-50%);white-space:nowrap;font:9px 'DM Mono';letter-spacing:.1em;color:var(--acid)}
+@keyframes lmhOpening{0%,17%{opacity:1;transform:scale(1)}26%,100%{opacity:0;transform:scale(1.08)}}
+@keyframes lmhKinetic{0%,15%{opacity:0;transform:scale(1.12) translateX(4%)}28%,46%{opacity:1;transform:scale(1.02) translateX(0)}56%,100%{opacity:0;transform:scale(1)}}
+@keyframes lmhSide{0%,43%{opacity:0;transform:scale(1.07)}55%,70%{opacity:1;transform:scale(1)}81%,100%{opacity:0;transform:scale(.98)}}
+@keyframes fiasFinal{0%,68%{opacity:0;transform:scale(1.08)}80%,94%{opacity:.95;transform:scale(1)}100%{opacity:0}}
+
+/* A.02 — an IA-generated race frame compresses, then the view tunnels into the rear suspension. */
+.heave-media{background:#070807;overflow:hidden}
+.heave-race,.heave-xray{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.heave-race{animation:porpoiseRace 11s cubic-bezier(.42,0,.58,1) infinite}
+.heave-xray{opacity:0;transform-origin:75% 57%;animation:heaveXray 11s cubic-bezier(.2,.8,.2,1) infinite}
+.heave-focus{position:absolute;inset:0;z-index:2;pointer-events:none;clip-path:circle(0 at 72% 62%);animation:focusReveal 11s cubic-bezier(.2,.8,.2,1) infinite}
+.heave-focus:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 74% 58%,transparent 0 30%,rgba(4,5,4,.72) 70%);mix-blend-mode:multiply}
+.heave-focus:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent 45%,rgba(214,255,63,.18) 50%,transparent 55%);transform:translateX(-120%);animation:scanSweep 11s ease-in-out infinite}
+.heave-focus span{position:absolute;z-index:1;left:7%;top:8%;font:700 clamp(2rem,5vw,5rem) Manrope;line-height:.8;letter-spacing:-.1em;color:var(--acid);opacity:0;animation:heaveCopy 11s ease-in-out infinite}
+.heave-focus p{position:absolute;z-index:1;bottom:7%;right:7%;font:9px 'DM Mono';color:var(--acid);letter-spacing:.1em;opacity:0;animation:heaveCopy 11s ease-in-out .2s infinite}
+@keyframes porpoiseRace{0%,34%{opacity:1;transform:scale(1) translateY(0)}8%{transform:scale(1.025) translateY(2.5%)}16%{transform:scale(1) translateY(-1.5%)}24%{transform:scale(1.03) translateY(3%)}42%,100%{opacity:0;transform:scale(1.1) translateY(-3%)}}
+@keyframes heaveXray{0%,38%{opacity:0;transform:scale(1.24)}53%,92%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(.98)}}
+@keyframes focusReveal{0%,39%,100%{clip-path:circle(0 at 72% 62%)}53%,89%{clip-path:circle(95% at 72% 62%)}}
+@keyframes scanSweep{0%,42%{transform:translateX(-120%)}61%,84%{transform:translateX(120%)}100%{transform:translateX(120%)}}
+@keyframes heaveCopy{0%,50%{opacity:0;transform:translateY(12px)}59%,87%{opacity:1;transform:translateY(0)}100%{opacity:0}}
+
+/* A.03 — the generated exploded frame is the anchor; original CAD pieces keep moving on top. */
+.exploded-media{perspective:1000px;background:#111512;overflow:hidden}
+.assembly-base{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(1) brightness(.32)!important;animation:assemblyBase 12s ease-in-out infinite}
+.rcf1-kinetic{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;animation:kineticAssembly 12s cubic-bezier(.2,.8,.2,1) infinite}
+.exploded-part{position:absolute!important;z-index:2;width:42%!important;height:42%!important;object-fit:contain!important;filter:drop-shadow(0 14px 20px rgba(0,0,0,.65))!important;animation:partsLock 12s cubic-bezier(.2,.8,.2,1) infinite}
+.exploded-lower{left:1%;bottom:5%;animation-delay:-1s}.exploded-upper{right:0;top:3%;animation-delay:-3s}.exploded-suspension{left:29%;top:21%;width:44%!important;height:44%!important;animation-delay:-4.5s}
+.assembly-hud{position:absolute;z-index:3;inset:0;padding:16px;display:flex;justify-content:space-between;align-items:flex-end;font:9px 'DM Mono';letter-spacing:.08em;color:var(--acid)}
+@keyframes assemblyBase{0%,100%{opacity:.8;transform:scale(1.05)}42%,74%{opacity:.2;transform:scale(1.12)}}
+@keyframes kineticAssembly{0%,16%{opacity:0;transform:scale(1.14)}31%,78%{opacity:1;transform:scale(1)}92%,100%{opacity:0;transform:scale(.98)}}
+@keyframes partsLock{0%,24%{opacity:.85;transform:translate3d(0,0,0) rotateY(-8deg)}52%,79%{opacity:0;transform:translate3d(10%,-12%,80px) rotateY(12deg)}100%{opacity:.85;transform:translate3d(0,0,0) rotateY(-8deg)}}
+@keyframes fiasPulse{0%,100%{transform:scale(.92);opacity:.35}50%{transform:scale(1.03);opacity:1}}
+
+@media(max-width:700px){.fias-wire p,.heave-focus p,.assembly-hud{font-size:7px}.heave-focus span{font-size:2rem}}
+@media(prefers-reduced-motion:reduce){.fias-media .lmh-still,.fias-media .fias-final,.fias-wire,.heave-race,.heave-xray,.heave-focus,.heave-focus:after,.heave-focus span,.heave-focus p,.assembly-base,.rcf1-kinetic,.exploded-part{animation:none}.lmh-kinetic,.heave-xray,.rcf1-kinetic{opacity:1}.heave-race,.exploded-part{opacity:0}}
