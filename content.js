@@ -1,4 +1,4 @@
-// Edit the project records and timeline below. Keep confidential material out of this file.
+// Edit project records, printProjects and timeline below. Keep confidential material out of this file.
 const portfolio = {
   "projects": [
     {
@@ -13,6 +13,10 @@ const portfolio = {
         "src": "",
         "alt": "",
         "caption": "Visual material withheld pending disclosure review."
+      },
+      "reference": {
+        "url": "https://www.jcb.com/en-US/explore/insight/news/2026/05/jcb-targets-new-land-speed-record-using-its-own-hydrogen-engines/",
+        "label": "JCB Hydromax · official project information ↗"
       }
     },
     {
@@ -27,20 +31,24 @@ const portfolio = {
         "src": "",
         "alt": "",
         "caption": "Visual material withheld pending disclosure review."
+      },
+      "reference": {
+        "url": "https://mgidefence.co.uk/tigershark/",
+        "label": "TigerShark · official project information ↗"
       }
     },
     {
       "id": "lmh",
       "category": "Academic",
-      "title": "Le Mans Hypercar chassis & impact",
-      "summary": "An LS-DYNA group design project at Cranfield University.",
+      "title": "LMH crash simulation & FIAS",
+      "summary": "LS-DYNA crash modelling for a frontal impact absorbing structure and chassis.",
       "role": "I developed the frontal impact absorbing structure (FIAS) after studying several concepts, built LS-DYNA models and ran crash simulations as part of a Cranfield team project.",
-      "method": "The team assessed the simulated response against the applicable FIA requirements as part of the academic study. I also created the vehicle renders from a CAD model made by a teammate.",
+      "method": "I studied several FIAS concepts and developed LS-DYNA models to investigate their crash response. The team assessed the simulated response against the applicable FIA requirements as part of the academic study.",
       "outcome": "",
       "media": {
-        "src": "./assets/lmh-render.jpg",
-        "alt": "Side view render of the team's Le Mans Hypercar concept.",
-        "caption": "Vehicle render by Sergi Roures Vives · CAD model by a project teammate."
+        "src": "",
+        "alt": "",
+        "caption": "Simulation visual to be selected from the project material."
       }
     },
     {
@@ -132,8 +140,8 @@ const portfolio = {
       "category": "Personal",
       "title": "Designed, analysed, printed",
       "summary": "Personal 3D-printed projects developed from my own ideas.",
-      "role": "I design many of my own printed parts from scratch and analyse them before making them. They are a way to turn an idea into a physical object and explore how it works.",
-      "method": "",
+      "role": "I design functional parts from scratch, analyse their behaviour in HyperMesh and OptiStruct, and 3D print them. Projects include storage solutions, shelving and headphone stands.",
+      "method": "I check stiffness, stress and deflection under representative loads and apply topology optimisation to load-bearing supports.",
       "outcome": "",
       "media": {
         "src": "",
@@ -179,5 +187,6 @@ const portfolio = {
       "organisation": "UPC Barcelona · ETSEIB",
       "description": "Bachelor’s thesis on suspension design for a 1:5 scale RC F1 car."
     }
-  ]
+  ],
+  "printProjects": []
 };

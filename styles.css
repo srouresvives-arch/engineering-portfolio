@@ -170,3 +170,11 @@ h2 { font: 600 3rem/1.1 var(--sans); letter-spacing: -.025em; }
   .journey-heading { flex-wrap:wrap; }
   .journey-step { grid-template-columns:44px 1fr; }
 }
+
+.reference-link { display:inline-block; margin-top:1.2rem; font:500 .78rem/1.5 var(--mono); }
+.print-gallery { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%, 240px),1fr)); gap:2rem; margin-top:2.5rem; }
+.print-project { border-top:1px solid var(--rule); padding-top:.75rem; }
+.print-project img { width:100%; aspect-ratio:4/3; object-fit:cover; background:var(--chalk); margin-bottom:1rem; }
+.print-project h3 { font:600 1.3rem/1.2 var(--sans); }
+.print-project p { color:var(--muted); margin-top:.5rem; }
+.gallery-empty { color:var(--muted); border-top:1px solid var(--rule); padding-top:1rem; }

@@ -22,6 +22,11 @@ function projectEntry(project, index) {
   for (const [label, text] of [["My contribution", project.role], ["Approach", project.method], ["Outcome", project.outcome]]) {
     if (text) copy.append(element("h3", "category", label), element("p", "", text));
   }
+  if (project.reference) {
+    const link = element("a", "reference-link", project.reference.label);
+    link.href = project.reference.url;
+    copy.append(link);
+  }
 
   const media = element("figure", "project-media");
   if (project.media.src) {
@@ -43,6 +48,20 @@ function projectEntry(project, index) {
 }
 
 document.querySelector("#projects").append(...portfolio.projects.map(projectEntry));
+const gallery = document.querySelector("#print-gallery");
+for (const project of portfolio.printProjects) {
+  const item = element("article", "print-project");
+  if (project.image) {
+    const image = element("img");
+    image.src = project.image;
+    image.alt = project.alt;
+    image.loading = "lazy";
+    item.append(image);
+  }
+  item.append(element("h3", "", project.title), element("p", "", project.description));
+  gallery.append(item);
+}
+document.querySelector("#gallery-empty").hidden = portfolio.printProjects.length > 0;
 const timeline = document.querySelector("#timeline");
 for (const item of portfolio.timeline) {
   const row = element("article", "timeline-row");

@@ -20,3 +20,7 @@ Static portfolio for reviewing the Full de banc edition. Open `index.html` in a 
 ## Optional GitHub Pages deployment
 
 After the disclosure review, select the approved branch and `/ (root)` in **Settings → Pages → Deploy from a branch**. The links and assets work from a repository subpath. For a local server, run `python -m http.server 8000` in this folder and open `http://localhost:8000/`.
+
+## 3D project catalogue
+
+Add an object to `printProjects` in `content.js` for every project, with `title`, `description`, `image` and `alt`. Save approved photos in `assets/` and use a relative path such as `./assets/bracket.jpg`. The catalogue displays an honest placeholder until the first project is added. List only features and services you can substantiate.
