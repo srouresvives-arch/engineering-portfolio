@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="360" viewBox="0 0 560 360" fill="none">
+<defs>
+  <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" stroke="#e1e8d8" opacity=".1"/></pattern>
+  <pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse"><path d="M-1 7 7-1M5 7 7 5" stroke="#afc0b4" opacity=".35"/></pattern>
+  <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" viewBox="0 0 8 8"><path d="m0 0 8 4-8 4 2-4z" fill="#e1a47d"/></marker>
+</defs>
+<path d="M24 24h512v312H24z" fill="url(#grid)" stroke="#67817a" stroke-width=".6"/>
+<path d="M280 38v280M40 180h480" stroke="#819b91" stroke-dasharray="6 6" opacity=".7"/>
+<path d="M87 109h155q19 0 19 19v104q0 19-19 19H87v-28h146v-86H87z" fill="url(#hatch)" stroke="#b8c9bc" stroke-width="1.5"/>
+<path d="M251 151h152l41 29-41 29H251z" fill="#314f49" stroke="#d4dfd0" stroke-width="1.5"/>
+<path d="M260 103h39v154h-39z" fill="#24433d" stroke="#d4dfd0" stroke-width="1.5"/>
+<path d="M270 103v154m19-154v154" stroke="#839e91"/>
+<path d="M255 103h49V91h-49zm0 154h49v12h-49z" fill="url(#hatch)" stroke="#d4dfd0"/>
+<g stroke="#e1a47d" stroke-width="2" marker-end="url(#arrow)"><path d="M450 180h55"/><path d="M147 123H60"/><path d="M147 237H60"/></g>
+<path d="M322 128h49l23-28h53M321 224h55l20 39h51" stroke="#9db3a5"/>
+<g fill="#d4dfd0" font-family="monospace" font-size="11" letter-spacing="1"><text x="394" y="92">PIN AXIS</text><text x="394" y="280">CENTRE LUG</text><text x="42" y="54">SECTION A–A</text></g>
+<g fill="#e1a47d" font-family="monospace" font-size="12"><text x="66" y="109">R₁</text><text x="66" y="260">R₂</text><text x="478" y="165">F</text></g>
+<g stroke="#d4dfd0"><path d="M46 302h24m-24 0v-24"/><circle cx="46" cy="302" r="2" fill="#d4dfd0"/></g>
+</svg>

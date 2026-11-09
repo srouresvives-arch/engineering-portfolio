@@ -1,20 +1,22 @@
-# Engineering Portfolio — first base
+# Sergi Roures Vives · Engineering portfolio
 
-A dependency-free, static portfolio base. Open `index.html` locally, or deploy this folder through GitHub Pages / Netlify / Vercel.
+Static portfolio for reviewing the first full editorial version. Open `index.html` in a browser. The project list and experience timeline use plain JavaScript. No build, server or account is required for local preview. The site requests Instrument Serif, Barlow and IBM Plex Mono from Google Fonts and uses local fallbacks offline.
 
-## Asset map
+## Edit the portfolio
 
-- `assets/lmh-race-night.jpeg`, `assets/lmh-side.jpeg`, `assets/lmh-fias-final.mp4` — original LMH/FiAS evidence
-- `assets/lmh-night-kinetic-v1.png` — derived cinematic LMH keyframe, generated from the two supplied LMH renders
-- `assets/variable-heave-porpoising-v1.png`, `assets/variable-heave-xray-v1.png` — AI-generated technical keyframes for the porpoising-to-suspension sequence
-- `assets/rcf1-assembly.png`, `assets/rcf1-suspension.png` — original RC F1 CAD renders
-- `assets/rcf1-exploded-kinetic-v1.png` — derived exploded-assembly keyframe generated from the supplied RC CAD renders
+- `content.js` holds the case studies and timeline. Each project has a stable `id` used in links, for example `index.html#boltcheck`. Empty approach or outcome fields are omitted.
+- `index.html` holds the home, about and contact copy. The email comes from the October 2026 CV. The phone number, postcode and original CV are excluded.
+- `styles.css` holds the typography, colours and responsive layout.
+- To add a photo you are allowed to share, put it in `assets/` and fill in the project's `media.src`, `media.alt` and `media.caption` in `content.js`. Use a relative path such as `./assets/formula-ford-workshop.webp`. Leave `src` blank to show the labelled image slot. The opening drawing is a generic illustration.
 
-JCB Hydromax and TigerShark now use short concept-motion clips generated from public reference imagery approved for this prototype. They are hosted remotely by the generation provider so the site remains light. Before a public launch, replace them with authorised project media (or confirm that use of the reference imagery and generated derivatives is approved).
+## Review before public launch
 
-## Next content pass
+- **Land speed and UAV cases.** Review the anonymised wording before launch. Keep client and programme identifiers, internal images, models, thresholds and results out of the repository unless cleared for disclosure.
+- **Cranfield and Formula Student.** Confirm permission and credits for team assets before adding them. Academic simulation comparisons do not establish homologation or certification.
+- **BoltCheck.** This portfolio includes a description only. Confirm what can be shown before adding screenshots, source code or examples of the underlying calculations.
+- **Personal work.** Add original print photographs and notes when available. Add NIX once the public role and scope can be substantiated.
+- Check that the role dates and contact email are still current.
 
-1. Replace `hello@example.com` with the real contact route.
-2. Add a short role, scope, tools and outcomes block to each case study.
-3. Export 2–4 approved hero assets for JCB and TigerShark into `assets/`.
-4. Add project pages when final copy and disclosure level are confirmed.
+## Optional GitHub Pages deployment
+
+After the disclosure review, select the approved branch and `/ (root)` in **Settings → Pages → Deploy from a branch**. The links and assets work from a repository subpath. For a local server, run `python -m http.server 8000` in this folder and open `http://localhost:8000/`.
