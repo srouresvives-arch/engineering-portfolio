@@ -1,11 +1,11 @@
 # Sergi Roures Vives · Engineering portfolio
 
-Static portfolio for reviewing the first full editorial version. Open `index.html` in a browser. The project list and experience timeline use plain JavaScript. No build, server or account is required for local preview. The site requests Instrument Serif, Barlow and IBM Plex Mono from Google Fonts and uses local fallbacks offline.
+Static portfolio for reviewing the Full de banc edition. Open `index.html` in a browser. The project list and experience timeline use plain JavaScript. No build, server or account is required for local preview. The site requests Golos Text and Recursive from Google Fonts and uses local fallbacks offline.
 
 ## Edit the portfolio
 
-- `content.js` holds the case studies and timeline. Each project has a stable `id` used in links, for example `index.html#boltcheck`. Empty approach or outcome fields are omitted.
-- `index.html` holds the home, about and contact copy. The email comes from the October 2026 CV. The phone number, postcode and original CV are excluded.
+- `content.js` holds the case studies and timeline. Each project has a stable `id` used in links, for example `index.html#boltcheck`. Empty approach or outcome fields are omitted. If you change a project ID, also update any matching shortcut in the opening sheet.
+- `index.html` holds the opening sheet, project shortcuts, about and contact copy. The email comes from the October 2026 CV. The phone number, postcode and original CV are excluded.
 - `styles.css` holds the typography, colours and responsive layout.
 - To add a photo you are allowed to share, put it in `assets/` and fill in the project's `media.src`, `media.alt` and `media.caption` in `content.js`. Use a relative path such as `./assets/formula-ford-workshop.webp`. Leave `src` blank to show the labelled image slot. The opening drawing is a generic illustration.
 

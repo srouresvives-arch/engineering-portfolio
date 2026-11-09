@@ -13,33 +13,46 @@
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="mast wrap" id="top">
-  <a href="#top" class="brand"><img src="./assets/mark.svg" alt="" width="36" height="36"><span>Sergi Roures Vives<small>Engineering portfolio</small></span></a>
+  <a href="#top" class="brand"><img src="./assets/mark.svg" alt="" width="36" height="36"><span>Sergi Roures Vives<small>Engineering notebook</small></span></a>
   <nav aria-label="Main navigation"><a href="#work">Work</a><a href="#about">About</a><a href="#experience">Experience</a><a href="#contact">Contact</a></nav>
 </header>
 <main id="main">
-  <section class="hero" aria-labelledby="hero-title">
-    <div class="wrap hero-grid">
-      <div class="hero-copy">
-        <p class="eyebrow"><span class="pip"></span> Stress engineer <span class="slash">/</span> Banbury, UK</p>
-        <h1 id="hero-title">Structures <em>under load.</em></h1>
-        <p class="intro">I’m Sergi Roures Vives. I build finite element models, assess metallic and composite structures, and use the results to help decide what changes in the next design iteration.</p>
-        <a class="hero-link" href="#work">Explore selected work <span aria-hidden="true">↘</span></a>
-      </div>
-      <figure class="hero-figure">
-        <div class="plate-header"><span>Fig. 01</span><span>Load path study</span></div>
-        <img src="./assets/load-path.svg" alt="Concept sketch of a double-shear joint, with arrows showing an applied load and reactions at two supports." width="560" height="360">
-        <figcaption><span>Double-shear joint</span><span>Illustrative · not to scale</span></figcaption>
-      </figure>
-    </div>
-  </section>
+<div class="wrap bench-wrap">
+<section id="srv-bench" aria-labelledby="notebook-title">
+  <div class="register mono"><h1 id="notebook-title">SRV / Engineering notebook</h1><span>Sheet 01 · Selected work</span></div>
+  <div class="board">
+    <svg class="schematic" viewBox="0 0 600 300" preserveAspectRatio="none" aria-hidden="true" fill="none" stroke="#a8aaa0">
+      <path d="M27 21h546v258H27zM300 21v258M27 150h546" stroke-dasharray="3 5" opacity=".65" vector-effect="non-scaling-stroke"/>
+      <path d="M125 49h94l37 73m219-73h-94l-37 73M125 251h94l37-73m219 73h-94l-37-73" vector-effect="non-scaling-stroke"/>
+    </svg>
+    <figure class="plate">
+      <svg viewBox="0 0 250 132" role="img" aria-label="Illustrative cross-section of a pin and lug" fill="none" stroke="currentColor">
+        <path d="M19 31h88v16H42v38h65v16H19zm84-9h18v88h-18zm18 32h69l29 12-29 12h-69z" stroke-width="1.5"/>
+        <path d="M7 66h236M112 6v119M19 112v12m200-12v12m-200-5h200" stroke-dasharray="3 3"/>
+        <path d="M220 66h22l-7-4m7 4-7 4" stroke="#854a32" stroke-width="2"/>
+      </svg>
+      <figcaption class="mono">Fig. A · Illustrative</figcaption>
+    </figure>
+    <button class="point p1" type="button" aria-pressed="true" data-case="land-speed"><b class="mono">A / 01</b> Land speed</button>
+    <button class="point p2" type="button" aria-pressed="false" data-case="heave"><b class="mono">B / 04</b> Variable heave</button>
+    <button class="point p3" type="button" aria-pressed="false" data-case="boltcheck"><b class="mono">C / 05</b> BoltCheck</button>
+    <button class="point p4" type="button" aria-pressed="false" data-case="formula-ford"><b class="mono">D / 07</b> Formula Ford</button>
+  </div>
+  <div class="readout" aria-live="polite">
+    <div class="locator mono" data-field="code">A / 01 · Professional</div>
+    <div><h2 data-field="title">Land speed record vehicle</h2><p data-field="note">Built composite shell models and mapped aerodynamic pressures to the structural mesh for a confidential client.</p><a class="mono case-link" data-field="link" href="#land-speed">Open full case ↘</a></div>
+  </div>
+  <div class="signoff mono"><span>Sergi Roures Vives / Stress engineer</span><a href="mailto:srouresvives@gmail.com">Contact ↗</a></div>
+</section>
+</div>
   <section id="work" class="section wrap" aria-labelledby="work-title">
-    <div class="section-head"><p class="eyebrow index">01 / Portfolio</p><div><h2 id="work-title">Selected work</h2><p>Structural analysis, vehicle dynamics and time in the workshop.</p></div></div>
+    <div class="section-head"><p class="eyebrow index">02 / Register</p><div><h2 id="work-title">Project register</h2><p>Open a sheet to read my contribution, approach and outcomes.</p></div></div>
     <div id="projects"></div>
     <noscript><p>Enable JavaScript to read the project case studies.</p></noscript>
   </section>
   <section id="about" class="about" aria-labelledby="about-title">
     <div class="section wrap section-head">
-      <p class="eyebrow index">02 / Profile</p>
+      <p class="eyebrow index">03 / Profile</p>
       <div><h2 id="about-title">About me</h2>
         <p class="bio">I trained in mechanical engineering in Barcelona and in motorsport engineering at Cranfield. I now work in stress analysis at MGI Engineering, where I model and assess metallic and composite structures.</p>
         <p class="bio">My route into analysis ran through Formula Student composites and a Porsche workshop. Those experiences shape what I look for in a model, from how a joint is assembled to whether a proposed change fits the available space.</p>
@@ -48,14 +61,14 @@
     </div>
   </section>
   <section id="experience" class="section wrap" aria-labelledby="experience-title">
-    <div class="section-head"><p class="eyebrow index">03 / Timeline</p><div><h2 id="experience-title">Experience &amp; education</h2><p>Professional roles and academic training.</p></div></div>
+    <div class="section-head"><p class="eyebrow index">04 / Timeline</p><div><h2 id="experience-title">Experience &amp; education</h2><p>Professional roles and academic training.</p></div></div>
     <div id="timeline"></div>
     <noscript><p>Enable JavaScript to read the full timeline.</p></noscript>
   </section>
 </main>
 <footer id="contact" class="footer">
   <div class="wrap footer-grid">
-    <div><p class="eyebrow">04 / Contact</p><h2>Get in touch</h2><a class="email" href="mailto:srouresvives@gmail.com">srouresvives@gmail.com</a></div>
+    <div><p class="eyebrow">05 / Contact</p><h2>Get in touch</h2><a class="email" href="mailto:srouresvives@gmail.com">srouresvives@gmail.com</a></div>
     <div class="colophon"><span>Sergi Roures Vives<br>Banbury, United Kingdom</span><a href="#top">Back to top ↑</a></div>
   </div>
 </footer>

@@ -62,3 +62,22 @@ function openLinkedProject() {
 
 window.addEventListener("hashchange", openLinkedProject);
 openLinkedProject();
+// The callouts preview entries from the project register.
+const bench = document.querySelector("#srv-bench");
+const callouts = [...bench.querySelectorAll("[data-case]")];
+const caseCode = bench.querySelector('[data-field="code"]');
+const caseTitle = bench.querySelector('[data-field="title"]');
+const caseNote = bench.querySelector('[data-field="note"]');
+const caseLink = bench.querySelector('[data-field="link"]');
+
+for (const callout of callouts) {
+  callout.addEventListener("click", () => {
+    const project = portfolio.projects.find(item => item.id === callout.dataset.case);
+    if (!project) return;
+    for (const peer of callouts) peer.setAttribute("aria-pressed", String(peer === callout));
+    caseCode.textContent = callout.querySelector("b").textContent + " · " + project.category;
+    caseTitle.textContent = project.title;
+    caseNote.textContent = project.summary;
+    caseLink.href = "#" + project.id;
+  });
+}
