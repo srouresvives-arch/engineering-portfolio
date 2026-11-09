@@ -34,13 +34,13 @@ const portfolio = {
       "category": "Academic",
       "title": "Le Mans Hypercar chassis & impact",
       "summary": "An LS-DYNA group design project at Cranfield University.",
-      "role": "I developed LS-DYNA models and ran crash simulations for a team project on a chassis and a bio-based frontal impact absorbing structure (FIAS).",
-      "method": "The team assessed the simulated response against the applicable FIA requirements as part of the academic design study.",
+      "role": "I developed the frontal impact absorbing structure (FIAS) after studying several concepts, built LS-DYNA models and ran crash simulations as part of a Cranfield team project.",
+      "method": "The team assessed the simulated response against the applicable FIA requirements as part of the academic study. I also created the vehicle renders from a CAD model made by a teammate.",
       "outcome": "",
       "media": {
-        "src": "",
-        "alt": "",
-        "caption": "Image slot · authorised team FIAS render or test setup."
+        "src": "./assets/lmh-render.jpg",
+        "alt": "Side view render of the team's Le Mans Hypercar concept.",
+        "caption": "Vehicle render by Sergi Roures Vives · CAD model by a project teammate."
       }
     },
     {
@@ -116,15 +116,29 @@ const portfolio = {
     {
       "id": "cad",
       "category": "Personal",
-      "title": "Small-scale vehicle design & 3D printing",
-      "summary": "A 1:5 RC F1 suspension study and a place for documented print projects.",
-      "role": "My bachelor’s thesis focused on the design of a suspension for a 1:5 scale RC F1 car. I also work on personal CAD and 3D printing projects.",
+      "title": "1:5 scale RC F1 suspension",
+      "summary": "Bachelor’s thesis on suspension design for a scale RC F1 car.",
+      "role": "My bachelor’s thesis focused on the design of a suspension for a 1:5 scale RC F1 car.",
       "method": "",
       "outcome": "",
       "media": {
         "src": "",
         "alt": "",
-        "caption": "Image slot · original RC CAD or a photographed print with its design notes."
+        "caption": "Image slot · original RC CAD or suspension details."
+      }
+    },
+    {
+      "id": "personal-design",
+      "category": "Personal",
+      "title": "Designed, analysed, printed",
+      "summary": "Personal 3D-printed projects developed from my own ideas.",
+      "role": "I design many of my own printed parts from scratch and analyse them before making them. They are a way to turn an idea into a physical object and explore how it works.",
+      "method": "",
+      "outcome": "",
+      "media": {
+        "src": "",
+        "alt": "",
+        "caption": "Image slot · personal designs and prints."
       }
     }
   ],
